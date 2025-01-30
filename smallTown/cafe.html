@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Street Café</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Main Street Café</h1>
+            <p class="subtitle">Est. 1923 • Small Town Charm</p>
+        </header>
+
+        <main>
+            <!-- Menu Section -->
+            <section id="menuSection" class="active">
+                <div class="menu-header">
+                    <h2>Our Menu</h2>
+                    <div class="upload-container">
+                        <label for="zipUpload" class="upload-button">
+                            Upload ZIP for Analysis
+                            <input type="file" id="zipUpload" accept=".zip">
+                        </label>
+                    </div>
+                </div>
+
+                <div class="menu-content">
+                    <div class="menu-category">
+                        <h3>Breakfast</h3>
+                        <div class="menu-item">
+                            <div class="item-header">
+                                <h4>Homestyle Pancakes</h4>
+                                <span class="price">$8.99</span>
+                            </div>
+                            <p>Fluffy buttermilk pancakes with pure maple syrup</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-header">
+                                <h4>Farm Fresh Eggs</h4>
+                                <span class="price">$7.99</span>
+                            </div>
+                            <p>Two eggs any style with toast and home fries</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-category">
+                        <h3>Lunch</h3>
+                        <div class="menu-item">
+                            <div class="item-header">
+                                <h4>Classic BLT</h4>
+                                <span class="price">$9.99</span>
+                            </div>
+                            <p>Crispy bacon, lettuce, tomato on fresh sourdough</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-header">
+                                <h4>Chicken Pot Pie</h4>
+                                <span class="price">$12.99</span>
+                            </div>
+                            <p>Homemade with fresh vegetables and flaky crust</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-category">
+                        <h3>Drinks</h3>
+                        <div class="menu-item">
+                            <div class="item-header">
+                                <h4>Local Roast Coffee</h4>
+                                <span class="price">$2.99</span>
+                            </div>
+                            <p>Freshly brewed, unlimited refills</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-header">
+                                <h4>Hand-squeezed Lemonade</h4>
+                                <span class="price">$3.99</span>
+                            </div>
+                            <p>Made fresh daily</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Analysis Section -->
+            <section id="analysisSection">
+                <div class="analysis-header">
+                    <h2>File Analysis</h2>
+                    <button class="back-to-menu">Back to Menu</button>
+                </div>
+                <div class="analysis-content">
+                    <div class="topics-container">
+                        <!-- Topics will be populated by backend -->
+                        <div class="placeholder-text">
+                            Your analysis results will appear here
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuSection = document.getElementById('menuSection');
+            const analysisSection = document.getElementById('analysisSection');
+            const fileInput = document.getElementById('zipUpload');
+            const backButton = document.querySelector('.back-to-menu');
+
+            // Handle file upload
+            fileInput.addEventListener('change', function(e) {
+                if (e.target.files.length > 0) {
+                    // Show analysis section
+                    menuSection.style.display = 'none';
+                    analysisSection.style.display = 'block';
+
+                    // Here you would handle the file upload to your backend
+                    // const file = e.target.files[0];
+                    // ... your backend processing code ...
+                }
+            });
+
+            // Handle back button
+            backButton.addEventListener('click', function() {
+                analysisSection.style.display = 'none';
+                menuSection.style.display = 'block';
+                fileInput.value = ''; // Reset file input
+            });
+        });
+    </script>
+</body>
+</html>
