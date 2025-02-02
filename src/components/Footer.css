@@ -1,0 +1,25 @@
+.footer {
+    height: 100px;
+    background: #2ECC71;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+  }
+  
+  .grass {
+    flex: 1;
+    height: 60px;
+    background: #27AE60;
+    clip-path: polygon(0 100%, 50% 0, 100% 100%);
+    animation: sway 3s ease-in-out infinite;
+  }
+  
+  .grass:nth-child(odd) {
+    animation-delay: 0.2s;
+  }
+  
+  @keyframes sway {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(5deg); }
+  }
+  

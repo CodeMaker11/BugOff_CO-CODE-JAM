@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Georgia', serif;
+}
+
+body {
+    background: #f4ede4;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.container {
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+}
+
+.upload-section {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.upload-btn {
+    display: inline-block;
+    background: #8b4513;
+    color: #fff;
+    padding: 12px 24px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.upload-btn:hover {
+    background: #693410;
+}
+
+.menu-card {
+    display: none;
+    background: #fff;
+    padding: 3rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.menu-card.active {
+    display: block;
+}
+
+.cafe-name {
+    font-size: 2.5rem;
+    color: #8b4513;
+    margin-bottom: 1rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.menu-section {
+    margin: 2rem 0;
+    text-align: left;
+}
+
+.menu-section h2 {
+    color: #8b4513;
+    border-bottom: 2px solid #8b4513;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+    color: #333;
+}
+
+.menu-item .price {
+    color: #8b4513;
+    font-weight: bold;
+}
+
+.analysis {
+    display: none;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+}
+
+.analysis.active {
+    display: block;
+}
+
+input[type="file"] {
+    display: none;
+}
